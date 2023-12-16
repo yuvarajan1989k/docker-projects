@@ -1,0 +1,44 @@
+# pull redis images from docker hub.
+docker pull redis
+
+# list images in the local system
+docker images
+
+# run the image in the container in the attached mode
+docker run redis  
+
+# list running container
+docker ps
+# list all (running/stopped) container 
+docker ps -a 
+
+# run the image in the container in the detached mode
+docker run redis -d 
+
+# stop the container
+docker stop $CONTAINER_ID 
+
+# run the specific version of image in the container, command will pull and run the image
+docker run redis:6.3 
+
+# bind the container port to host port. 
+docker run -p $HOST_PORT:$CONTAINER_PORT  $IMAGE_IMAGE -d 
+
+# check the logs of docker instance 
+docker logs $CONTAINER_ID 
+
+# name the container 
+docker run -d -p 6001:6379 --name $container_name $image_name
+
+# terminal to the running container (it - interactive terminal)
+docker exec -it $container_id /bin/bash 
+
+
+
+
+
+
+
+
+
+
